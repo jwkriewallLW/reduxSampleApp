@@ -4,5 +4,6 @@ export default {
     apiCallsInProgress: 0,
     count: 0,
     weather: "",
-    allWeather: []
+    allWeather: [],
+    intellij: []
 }

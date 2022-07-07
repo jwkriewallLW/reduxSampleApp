@@ -39,6 +39,20 @@ const weather = [
   "timezone":-21600,
   "id":5419384,
   "name":"Denver",
+  "cod":200},
+
+  {"coord":{"lon":-104.9847,"lat":39.7392},
+  "weather":[],
+  "base":"stations",
+  "main":{"temp":293.87,"feels_like":292.99,"temp_min":291.14,"temp_max":297.29,"pressure":1014,"humidity":38},
+  "visibility":10000,
+  "wind":{"speed":0.45,"deg":210},
+  "clouds":{"all":94},
+  "dt":1656506878,
+  "sys":{"type":2,"id":2004616,"country":"US","sunrise":1656502481,"sunset":1656556315},
+  "timezone":-21600,
+  "id":5419384,
+  "name":"Sample",
   "cod":200}
 ]
 

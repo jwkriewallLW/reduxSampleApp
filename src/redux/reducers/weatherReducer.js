@@ -10,11 +10,20 @@ export default function weatherReducer(state=initialState, action){
             };
        
         case types.ALL_WEATHER:
-            debugger;
             
             return{
                 ...state, allWeather:action.weather
             };
+
+        case types.INTELLIJ_API:
+            return {
+                ...state, intellij:action.response
+            };
+        
+        case types.ADD_WEATHER:
+            return {
+                ...this.state //, intellij:action.response
+            }
         default: 
             return state;
 

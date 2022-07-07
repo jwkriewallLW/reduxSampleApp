@@ -7,6 +7,7 @@ import WeatherApi from './weather/WeatherApi';
 import PageNotFound from './PageNotFound';
 import CoursesPage from './courses/CoursesPage';
 import TestPage from './testPage/TestPage';
+import AddNewWeatherForm from './weather/AddNewWeatherForm';
 import ManageCoursePage from './courses/ManageCoursePage';
 import { makeStyles } from "@mui/styles";
 import Layout from './common/Layout';
@@ -39,9 +40,10 @@ function App() {
                 endpoint that matches with pageNotFound being default. */}
                     <Switch>
                         <Route exact path="/" component={HomePage} />
-                        <Route path="/about" component={WeatherApi} />
+                        <Route path="/weatherapi" component={WeatherApi} />
                         <Route path="/courses" component={CoursesPage} />
                         <Route path="/testpage" component={TestPage} />
+                        <Route path="/addweather" component={AddNewWeatherForm} />
                         <Route path="/course/:slug" component={ManageCoursePage} />
                         <Route path="/course" component={ManageCoursePage} />
                         <Route component={PageNotFound} />

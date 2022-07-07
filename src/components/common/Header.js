@@ -21,9 +21,11 @@ const Header = () => {
                     <ButtonGroup variant="text" display="flex" aria-label="text button group">
                             
                             <Button1 component={Link} to="/"><HomeOutlinedIcon/></Button1>
-                            <Button1 component={Link} to="/about">Weather API</Button1>
+                            <Button1 component={Link} to="/weatherapi">Weather API</Button1>
+                            <Button1 component={Link} to="/addweather">Add Weather</Button1>
                             {/*<Button1 component={Link} to="/courses">Courses</Button1>*/}
                             <Button1 component={Link} to="/testpage">Test Page</Button1>
+                            
                         
                     </ButtonGroup>
                 </Toolbar>
