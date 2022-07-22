@@ -5,12 +5,13 @@ import Header from './common/Header';
 import HomePage from './home/HomePage';
 import WeatherApi from './weather/WeatherApi';
 import PageNotFound from './PageNotFound';
-import CoursesPage from './courses/CoursesPage';
 import TestPage from './testPage/TestPage';
 import AddNewWeatherForm from './weather/AddNewWeatherForm';
-import ManageCoursePage from './courses/ManageCoursePage';
 import { makeStyles } from "@mui/styles";
 import Layout from './common/Layout';
+import EditWeatherForm from './weather/EditWeatherForm';
+
+
 //import { title, layout } from './common/Layout'
 
 
@@ -41,11 +42,9 @@ function App() {
                     <Switch>
                         <Route exact path="/" component={HomePage} />
                         <Route path="/weatherapi" component={WeatherApi} />
-                        <Route path="/courses" component={CoursesPage} />
                         <Route path="/testpage" component={TestPage} />
                         <Route path="/addweather" component={AddNewWeatherForm} />
-                        <Route path="/course/:slug" component={ManageCoursePage} />
-                        <Route path="/course" component={ManageCoursePage} />
+                        <Route path="/updateweather/:id" component={EditWeatherForm} />
                         <Route component={PageNotFound} />
                     </Switch>
                 </Layout>

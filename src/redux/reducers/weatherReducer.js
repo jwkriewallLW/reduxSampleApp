@@ -1,7 +1,7 @@
-import initialState from "./initialState";
 import * as types from "../actions/weatherTypes";
+import initialStateWeather from "./initialStateWeather";
 
-export default function weatherReducer(state=initialState, action){
+export default function weatherReducer(state=initialStateWeather, action){
     
     switch(action.type){
         case types.NEW_CAT_FACT: 
@@ -23,7 +23,29 @@ export default function weatherReducer(state=initialState, action){
         case types.ADD_WEATHER:
             return {
                 ...this.state //, intellij:action.response
+            };
+
+        case types.DELETE_WEATHER:
+            return {
+                ...state
+            };
+
+        case types.GET_SINGLE_WEATHER:
+            return {
+                ...state, weather:action.payload
+            };
+
+        case types.UPDATE_WEATHER: 
+            return {
+                ...state
             }
+        
+        case types.GET_TOP_TEN_WEATHER:
+            debugger;
+            return {
+                ...state, topten:action.payload
+            }
+
         default: 
             return state;
 

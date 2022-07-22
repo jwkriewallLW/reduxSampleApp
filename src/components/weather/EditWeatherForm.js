@@ -1,41 +1,42 @@
-import React, { useState } from "react";
+import React from "react";
 import * as weatherActions from  '../../redux/actions/weatherActions';
 import { Button, TextField } from "@mui/material";
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
 import { Box } from "@mui/system";
 
-
-class AddNewWeatherForm extends React.Component {
+class EditWeatherForm extends React.Component {
 
     constructor(props) {
         super(props);
+        const { id } = props.match.params;
+        this.state = {
+            id
+        };
     }
 
 handleChange = (e) => {
     let { name, value } = e.target;
-    this.setState({...this.state, [name]: value})
-    console.log(this.state)
+    this.setState({...this.state, [name]: value})   
 }
 
-handleSubmit = () => {
-    //e.preventDefault();
-    this.props.actions.addWeather(this.state)
-    history.pushState(this.state, '', "http://localhost:3000/addweather")
+    update = () => {
+    this.props.actions.updateSingleWeather(this.state, this.state.id)
+    history.pushState(this.state, '', "http://localhost:3000/weatherapi")
 }
 
 render() {
-    return ( 
+    return (
         <div>
-            <h2>Add Weather</h2>
-            <form onSubmit={this.handleSubmit} >
-                {/* <input type="submit"/> */}
+            
+            <h2>Edit Weather</h2>
+            <form onSubmit={this.update} >
                     <br/>
                     <Box m={2}>
                         <TextField
                             name="cityName"
                             id="outlined-textarea"
-                            label="City Name"
+                            label={"City Name"}
                             placeholder=""
                             multiline
                             value={this.cityName}
@@ -90,12 +91,13 @@ render() {
                             onChange={this.handleChange}
                         />
                     </Box>
+
                     <Button
                         sx={{margin:2}}
                         type="submit"
                         variant="contained"
                         color="secondary">
-                        Submit
+                        Submit Edit
                     </Button>
                 </form>
             </div>
@@ -113,4 +115,4 @@ function mapDispatchToProps(dispatch) {
     };
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(AddNewWeatherForm);
+export default connect(mapStateToProps, mapDispatchToProps)(EditWeatherForm);

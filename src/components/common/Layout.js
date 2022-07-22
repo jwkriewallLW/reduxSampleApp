@@ -1,10 +1,10 @@
-import { ClassNames } from "@emotion/react";
 import { makeStyles } from "@mui/styles";
 import React from 'react'
+import { BACKGROUND_COLOR } from "../../colorScheme";
 
 const useStyles = makeStyles({
     page: {
-        background: 'rgb(220, 245, 209)',
+        background: BACKGROUND_COLOR,
     }, 
     body: {
         height: "100vh",

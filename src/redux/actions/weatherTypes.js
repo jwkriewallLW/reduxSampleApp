@@ -3,3 +3,8 @@ export const ALL_WEATHER = "ALL_WEATHER";
 
 export const INTELLIJ_API = "INTELLIJ_API";
 export const ADD_WEATHER = "ADD_WEATHER";
+export const DELETE_WEATHER = "DELETE_WEATHER";
+export const UPDATE_WEATHER = "UPDATE_WEATHER";
+export const GET_SINGLE_WEATHER = "GET_SINGLE_WEATHER";
+
+export const GET_TOP_TEN_WEATHER = "GET_TOP_TEN_WEATHER";
